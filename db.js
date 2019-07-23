@@ -12,7 +12,7 @@ mongoClient.connect("mongodb://localhost:27017")
     function deleteAlunos(id, callback){
         global.conn.collection("alunos").remove({_id: ObjectId(id) }, callback)
     }
-    function isertAlunos(alunos, callback){
+    function insertAlunos(alunos, callback){
         global.conn.collection("alunos").insert(alunos, callback)
     }
     module.exports = { findAll, deleteAlunos, insertAlunos }
