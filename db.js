@@ -15,4 +15,9 @@ mongoClient.connect("mongodb://localhost:27017")
     function insertAlunos(alunos, callback){
         global.conn.collection("alunos").insert(alunos, callback)
     }
-    module.exports = { findAll, deleteAlunos, insertAlunos }
+    function updateAlunos(id, alunos, callback){
+        global.conn.collection("alunos").update({_id:Object(id)}, alunos, callback);
+
+
+    }
+    module.exports = { findAll, deleteAlunos, insertAlunos, updateAlunos }

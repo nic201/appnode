@@ -13,12 +13,12 @@ router.post('/', function(req, res, next){
          if(id != ""){
             db.updateAlunos(id, {nome, idade }, function(err,result){
             if(err) return console.log(err);
-            res.redirect('alunos/all');
+            res.redirect('/alunos/all');
             })
           } else {
               db.insertAlunos({nome, idade}), function(err, result){
                   if(err) return console.log(err);
-                  res.redirect('alunos/all');
+                  res.redirect('/alunos/all');
                 
               }
 
