@@ -16,11 +16,5 @@ router.get('/all', function(req, res, next) {
             res.redirect('/alunos/all');
         })
     })  
-    // router.post('/', function(req, res, next){
-    //     var id = req.body.id;
-    //     var nome = req.body.nome;
-    //     var idade = req.body.idade;
-    //     var db = require('../db');
-    
-    //})     
+ 
 module.exports = router;
